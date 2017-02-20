@@ -1,13 +1,14 @@
 /**
- * @author Mike Britton, Cliff Hall
- *
+ * @original_author Mike Britton, Cliff Hall
+ * @author2 Andrew Tangeman
  * @class TodoProxy
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
  *
  */
 puremvc.define({
-		name: 'todomvc.model.proxy.TodoProxy',
-		parent: puremvc.Proxy
+		name: 'todomvc.model.proxy.GithubRepoProxy',
+		parent: puremvc.Proxy,
+		githubURL: 'https://api.github.com/users/atangeman/repos'
 	},
 
 	// INSTANCE MEMBERS
@@ -18,20 +19,31 @@ puremvc.define({
 		LOCAL_STORAGE: 'todos-puremvc',
 
 		onRegister: function() {
-			this.loadData();
+			this.getRepos();
 		},
 
 		loadData: function() {
-			var storageObject;
-			if ( !localStorage.getItem( this.LOCAL_STORAGE ) ) {
-				this.saveData();
-			}
-			storageObject = JSON.parse( localStorage.getItem( this.LOCAL_STORAGE ) );
-			this.todos = storageObject.todos;
-			this.filter = storageObject.filter;
+			var githubObject;
+			storageObject = JSON.parse(getRepos(this.githubURL));
+			console.log(this.responseText);
+			//this.todos = storageObject.todos;
+			//this.filter = storageObject.filter;
 			this.computeStats();
 		},
-
+		getRepos: function(repoURL){
+			var request = new XMLHttpRequest();
+			// Set the event handler
+			request.onload = loadData;
+			// Initialize the request
+			request.open('get', repoURL, true)
+			// Fire away!
+			request.send()
+		}, 
+		
+		processData: function() {
+			var githubObject;
+			storageObject = JSON.parse(this.responseText
+		},
 		saveData: function() {
 			var storageObject = { todos:this.todos, filter:this.filter };
 			localStorage.setItem( this.LOCAL_STORAGE, JSON.stringify( storageObject ) );
