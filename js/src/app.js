@@ -10,6 +10,7 @@ puremvc.define({
             // register the startup command and trigger it.
             this.facade.registerCommand( todomvc.AppConstants.STARTUP, todomvc.controller.command.StartupCommand );
             this.facade.sendNotification( todomvc.AppConstants.STARTUP );
+            this.facade.sendNotification( todomvc.AppConstants.GET_REPOS );
         }
     },
 

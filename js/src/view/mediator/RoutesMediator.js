@@ -17,7 +17,7 @@ puremvc.define({
         // setup the routes when mediator is registered
         onRegister: function() {
             
-            var todoProxy    = this.facade.retrieveProxy( todomvc.model.proxy.TodoProxy.NAME ),
+            var todoProxy    = this.facade.retrieveProxy( todomvc.model.proxy.RepoProxy.NAME ),
                 defaultRoute = this.getRouteForFilter( todoProxy.filter ), 
                 options      = { resource:this, notfound:this.handleFilterAll },
                 routes       = {
