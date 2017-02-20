@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-            <title>Andy Tangeman Portfolio</title>
-            <link rel="stylesheet" href="assets/base.css">
-            <!--[if IE]>
+        <title>Andy Tangeman Portfolio</title>
+        <link rel="stylesheet" href="assets/base.css">
+        <!--[if IE]>
                 <script src="assets/ie.js"></script>
             <![endif]-->
     </head>
@@ -13,9 +13,17 @@
         <section id="porfolioapp">
             <header id="header">
                 <h1>Repos</h1>
-            </header>           
+            </header>
+            <section id="main">
+                <ul id="repo-list"></ul>
+                <button id="refresh">Clear completed (1)</button>
+            </section>
             <footer id="footer">
-                <span id="todo-count"><strong>1</strong> item left</span>
+                <span id="repo-count">
+                    <strong>1</strong>
+                    item left
+                
+                </span>
                 <ul id="filters">
                     <li>
                         <a id="filterAll" class="selected" href="#/">All</a>
@@ -32,52 +40,43 @@
         </section>
         <footer id="info">
             <p>Double-click to edit a todo</p>
-            <p>Created by <a href="http://puremvc.org">Andrew Tangeman 2017</a></p>
-            <p>Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a></p>
+            <p>
+                Created by <a href="http://puremvc.org">Andrew Tangeman 2017</a>
+            </p>
+            <p>
+                Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a>
+            </p>
         </footer>
-        
         <!-- TODOMVC PROJECT BASE -->
         <script src="assets/base.js"></script>
-
         <!-- FLATIRION DIRECTOR ROUTING LIBRARY -->
         <script src="assets/director-1.1.6.min.js"></script>
-        
         <!-- PUREMVC LIBRARY -->
         <script src="js/libs/puremvc-1.0.1.min.js"></script>
-
         <!-- APPLICATION CONSTANTS -->
         <script src="js/src/AppConstants.js"></script>
-
         <!-- PROXIES -->
         <script src="js/src/model/proxy/RepoProxy.js"></script>
-    
-        <!-- EVENTS 
+        <!-- EVENTS -->
         <script src="js/src/view/event/AppEvents.js"></script>
-                -->
-        <!-- VIEW COMPONENTS 
+        <!-- VIEW COMPONENTS         -->
         <script src="js/src/view/component/TodoForm.js"></script>
-        -->
-        <!-- MEDIATORS 
+        <!-- MEDIATORS  -->
         <script src="js/src/view/mediator/RoutesMediator.js"></script>
-            -->
         <script src="js/src/view/mediator/TodoFormMediator.js"></script>
-
         <!-- COMMANDS -->
         <script src="js/src/controller/command/StartupCommand.js"></script>
         <script src="js/src/controller/command/PrepControllerCommand.js"></script>
         <script src="js/src/controller/command/PrepModelCommand.js"></script>
         <script src="js/src/controller/command/PrepViewCommand.js"></script>
-          <!-- <script src="js/src/controller/command/TodoCommand.js"></script>-->
-    
+        <script src="js/src/controller/command/TodoCommand.js"></script>
         <!-- APPLICATION -->
         <script src="js/src/app.js"></script>
-        
         <!-- START THE APPLICATION -->
         <script>
-        document.addEventListener('DOMContentLoaded', function() 
-        {
-            var app = new todomvc.Application();
-        });
+            document.addEventListener('DOMContentLoaded', function() {
+                var app = new todomvc.Application();
+            });
         </script>
     </body>
 </html>

@@ -16,33 +16,15 @@ puremvc.define ({
          * @override
          */
         execute: function ( note ) {
-            var proxy = this.facade.retrieveProxy( todomvc.model.proxy.TodoProxy.NAME );
-            
-            switch( note.getName() ) {
-                case todomvc.AppConstants.ADD_TODO:
-                    proxy.addTodo( note.getBody() );
+            var proxy = this.facade.retrieveProxy( todomvc.model.proxy.RepoProxy.NAME );
+            switch( note.getName() ) {             
+                case todomvc.AppConstants.SHOW_REPOS:
+                    proxy.showRepos( note.getBody() );
                     break;
- 
-                case todomvc.AppConstants.DELETE_TODO:
-                    proxy.deleteTodo( note.getBody() );
+                case todomvc.AppConstants.GET_REPOS:
+                    console.log('getrepos');
+                    proxy.getRepos();
                     break;
- 
-                case todomvc.AppConstants.UPDATE_TODO:
-                    proxy.updateTodo( note.getBody() );
-                    break;
-                
-                case todomvc.AppConstants.TOGGLE_TODO_STATUS:
-                    proxy.toggleCompleteStatus( note.getBody() );
-                    break;
- 
-                case todomvc.AppConstants.REMOVE_TODOS_COMPLETED:
-                    proxy.removeTodosCompleted();
-                    break;
- 
-                case todomvc.AppConstants.FILTER_TODOS:
-                    proxy.filterTodos( note.getBody() );
-                    break;
-               
                 default:
                     console.log('TodoCommand received an unsupported Notification');
                     break;

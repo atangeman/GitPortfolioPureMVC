@@ -16,6 +16,7 @@ puremvc.define({
          * @override
          */
         initializeMacroCommand: function () {
+                        
             this.addSubCommand( todomvc.controller.command.PrepControllerCommand );
             this.addSubCommand( todomvc.controller.command.PrepModelCommand );
             this.addSubCommand( todomvc.controller.command.PrepViewCommand );  

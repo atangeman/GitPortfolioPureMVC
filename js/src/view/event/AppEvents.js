@@ -8,12 +8,7 @@ puremvc.define({ name: 'todomvc.view.event.AppEvents' }, {},
     // STATIC MEMBERS   
     {   
         // Event name constants
-        TOGGLE_COMPLETE_ALL:    'toggle_complete_all',
-        TOGGLE_COMPLETE:        'toggle_complete',
-        CLEAR_COMPLETED:        'clear_completed',
-        DELETE_ITEM:            'delete_item',
-        UPDATE_ITEM:            'update_item',
-        ADD_ITEM:               'add_item',
+        REPOS_LOADED:    'repos_loaded',
         
         // Create event (cross-browser)
         createEvent: function( eventName ) {
