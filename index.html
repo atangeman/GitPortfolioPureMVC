@@ -21,7 +21,7 @@
                                 <a href="#" class="pure-menu-link">CV</a>
                             </li>
                             <li class="pure-menu-item">
-                                <a href="#" class="pure-menu-link">
+                                <a href="#/repos" class="pure-menu-link">
                                     GitHub <span class="email-count">(2)</span>
                                 </a>
                             </li>
@@ -44,7 +44,8 @@
             <div id="list" class="pure-u-1">
                 <ul id="repo-list"></ul>
             </div>
-            <div id="main" class="pure-u-1">
+            <div id="main" class="pure-u-1-5"></div>
+            <!--
                 <div class="email-content">
                     <div class="email-content-header pure-g">
                         <div class="pure-u-1-2">
@@ -70,15 +71,10 @@
                         <p>Donec sagittis dolor ut quam pharetra pretium varius in nibh. Suspendisse potenti. Donec imperdiet, velit vel adipiscing bibendum, leo eros tristique augue, eu rutrum lacus sapien vel quam. Nam orci arcu, luctus quis vestibulum ut, ullamcorper ut enim. Morbi semper erat quis orci aliquet condimentum. Nam interdum mauris sed massa dignissim rhoncus.
                 </p>
                         <p>
-                            Regards,<br>Tilo
-                
-                        
-                        
-                        
+                            Regards,<br>Tilo                                  
                         </p>
                     </div>
-                </div>
-            </div>
+                </div>-->
             <!--
             <footer id="info">
                 <p>
@@ -103,15 +99,18 @@
         <script src="js/src/view/event/AppEvents.js"></script>
         <!-- VIEW COMPONENTS         -->
         <script src="js/src/view/component/TodoForm.js"></script>
+        <script src="js/src/view/component/HomePage.js"></script>
         <!-- MEDIATORS  -->
         <script src="js/src/view/mediator/RoutesMediator.js"></script>
         <script src="js/src/view/mediator/TodoFormMediator.js"></script>
+        <script src="js/src/view/mediator/HomeMediator.js"></script>
         <!-- COMMANDS -->
         <script src="js/src/controller/command/StartupCommand.js"></script>
         <script src="js/src/controller/command/PrepControllerCommand.js"></script>
         <script src="js/src/controller/command/PrepModelCommand.js"></script>
         <script src="js/src/controller/command/PrepViewCommand.js"></script>
         <script src="js/src/controller/command/RepoCommand.js"></script>
+        <script src="js/src/controller/command/HomePageCommand.js"></script>
         <!-- APPLICATION -->
         <script src="js/src/app.js"></script>
         <!-- START THE APPLICATION -->

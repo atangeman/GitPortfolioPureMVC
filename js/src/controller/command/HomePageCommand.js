@@ -5,7 +5,7 @@
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
  */
 puremvc.define({
-    name: 'todomvc.controller.command.PrepViewCommand',
+    name: 'todomvc.controller.command.HomePageCommand',
     parent: puremvc.SimpleCommand
 }, // INSTANCE MEMBERS
 {
@@ -14,8 +14,6 @@ puremvc.define({
          * @override
          */
     execute: function(note) {
-        this.facade.registerMediator(new todomvc.view.mediator.HomeMediator());
-        this.facade.registerMediator(new todomvc.view.mediator.TodoFormMediator());
-        this.facade.registerMediator(new todomvc.view.mediator.RoutesMediator());
+        console.log("home page command");
     }
 });
