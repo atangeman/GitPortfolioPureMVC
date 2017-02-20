@@ -5,7 +5,7 @@
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
  */
 puremvc.define ({
-        name: 'todomvc.controller.command.TodoCommand',
+        name: 'todomvc.controller.command.RepoCommand',
         parent: puremvc.SimpleCommand
     },
   
