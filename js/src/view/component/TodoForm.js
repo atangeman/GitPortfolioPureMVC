@@ -12,8 +12,8 @@ puremvc.define({
         this.stats = {};
         this.filter = '';
         // Fixed DOM elements managed by this view component
-        this.porfolioapp = document.querySelector('#porfolioapp');
-        this.main = this.porfolioapp.querySelector('#main');
+        this.porfolioapp = document.querySelector('#layout');
+        //this.main = this.porfolioapp.querySelector('#main');
         this.repoList = this.porfolioapp.querySelector('#repo-list');
         this.footer = this.porfolioapp.querySelector('#footer');
         this.repoCount = this.porfolioapp.querySelector('#repo-count');
@@ -35,25 +35,34 @@ puremvc.define({
         todomvc.view.event.AppEvents.dispatchEvent(this.porfolioapp, event);
     },
     setFilteredList: function(data) {
-        var repo, checkbox, label, description, divDisplay, inputEditTodo, li, i, todoId, div, inputEditTodo;
+        var repo, icon, avatar, label, description, divDisplay, inputEditTodo, li, i, todoId, div, inputEditTodo;
         // Update instance data
         this.repos = JSON.parse(data.repos);
         // Create repo list
         for (i = 0; i < this.repos.length; i++) {
             repo = this.repos[i];
-            console.log(repo);
+            //console.log(repo);
             // Create div text
-            label = document.createElement('h2');
+            icon = document.createElement('div');
+            icon.className = 'pure-u';
+            avatar = document.createElement('img');
+            avatar.className = 'email-avatar';
+            avatar.setAttribute('src', repo.owner.avatar_url);
+            icon.appendChild(avatar);
+
+            label = document.createElement('h4');
+            label.className = 'email-subject';
             label.setAttribute('data-repo-id', repo.id);
             label.appendChild(document.createTextNode(repo.name));
-            
+
             description = document.createElement('p');
+            description.className = 'email-desc';
             description.setAttribute('data-repo-id', repo.id);
             description.appendChild(document.createTextNode(repo.description));
-
             // Create divDisplay
+
             divDisplay = document.createElement('div');
-            divDisplay.className = 'view';
+            divDisplay.className = 'pure-u-3-4';
             divDisplay.setAttribute('data-todo-id', repo.id);
             divDisplay.appendChild(label);
             divDisplay.appendChild(description);
@@ -77,8 +86,10 @@ puremvc.define({
 					});
 */
             // Create Todo ListItem and add to list
-            li = document.createElement('li');
+            li = document.createElement('div');
+            li.className = 'email-item email-item-unread pure-g';
             li.id = 'li_' + repo.id;
+            li.appendChild(icon);
             li.appendChild(divDisplay);
             this.repoList.appendChild(li);
         }
