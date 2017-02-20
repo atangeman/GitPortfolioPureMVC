@@ -15,10 +15,9 @@
             <div id="nav" class="pure-u">
                 <a href="#" class="nav-menu-button">Menu</a>
                 <div class="nav-inner">
-                                    <h1 class="email-content-title">Menu</h1>
                     <div class="pure-menu">
                         <ul class="pure-menu-list">
-                                                    <li class="pure-menu-item">
+                            <li class="pure-menu-item">
                                 <a href="#" class="pure-menu-link">CV</a>
                             </li>
                             <li class="pure-menu-item">
@@ -37,7 +36,7 @@
                             </li>
                             <li class="pure-menu-item">
                                 <a href="#" class="pure-menu-link">About</a>
-                            </li>                           
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -75,6 +74,7 @@
                 
                         
                         
+                        
                         </p>
                     </div>
                 </div>
@@ -88,37 +88,37 @@
                     Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a>
                 </p>
             </footer>-->
-            </div>
-            <!-- TODOMVC PROJECT BASE -->
-            <script src="assets/base.js"></script>
-            <!-- FLATIRION DIRECTOR ROUTING LIBRARY -->
-            <script src="assets/director-1.1.6.min.js"></script>
-            <!-- PUREMVC LIBRARY -->
-            <script src="js/libs/puremvc-1.0.1.min.js"></script>
-            <!-- APPLICATION CONSTANTS -->
-            <script src="js/src/AppConstants.js"></script>
-            <!-- PROXIES -->
-            <script src="js/src/model/proxy/RepoProxy.js"></script>
-            <!-- EVENTS -->
-            <script src="js/src/view/event/AppEvents.js"></script>
-            <!-- VIEW COMPONENTS         -->
-            <script src="js/src/view/component/TodoForm.js"></script>
-            <!-- MEDIATORS  -->
-            <script src="js/src/view/mediator/RoutesMediator.js"></script>
-            <script src="js/src/view/mediator/TodoFormMediator.js"></script>
-            <!-- COMMANDS -->
-            <script src="js/src/controller/command/StartupCommand.js"></script>
-            <script src="js/src/controller/command/PrepControllerCommand.js"></script>
-            <script src="js/src/controller/command/PrepModelCommand.js"></script>
-            <script src="js/src/controller/command/PrepViewCommand.js"></script>
-            <script src="js/src/controller/command/TodoCommand.js"></script>
-            <!-- APPLICATION -->
-            <script src="js/src/app.js"></script>
-            <!-- START THE APPLICATION -->
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var app = new todomvc.Application();
-                });
-            </script>
+        </div>
+        <!-- TODOMVC PROJECT BASE -->
+        <script src="assets/base.js"></script>
+        <!-- FLATIRION DIRECTOR ROUTING LIBRARY -->
+        <script src="assets/director-1.1.6.min.js"></script>
+        <!-- PUREMVC LIBRARY -->
+        <script src="js/libs/puremvc-1.0.1.min.js"></script>
+        <!-- APPLICATION CONSTANTS -->
+        <script src="js/src/AppConstants.js"></script>
+        <!-- PROXIES -->
+        <script src="js/src/model/proxy/RepoProxy.js"></script>
+        <!-- EVENTS -->
+        <script src="js/src/view/event/AppEvents.js"></script>
+        <!-- VIEW COMPONENTS         -->
+        <script src="js/src/view/component/TodoForm.js"></script>
+        <!-- MEDIATORS  -->
+        <script src="js/src/view/mediator/RoutesMediator.js"></script>
+        <script src="js/src/view/mediator/TodoFormMediator.js"></script>
+        <!-- COMMANDS -->
+        <script src="js/src/controller/command/StartupCommand.js"></script>
+        <script src="js/src/controller/command/PrepControllerCommand.js"></script>
+        <script src="js/src/controller/command/PrepModelCommand.js"></script>
+        <script src="js/src/controller/command/PrepViewCommand.js"></script>
+        <script src="js/src/controller/command/RepoCommand.js"></script>
+        <!-- APPLICATION -->
+        <script src="js/src/app.js"></script>
+        <!-- START THE APPLICATION -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var app = new todomvc.Application();
+            });
+        </script>
     </body>
 </html>
