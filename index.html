@@ -3,24 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-            <title>PureMVC • TodoMVC</title>
+            <title>Andy Tangeman Portfolio</title>
             <link rel="stylesheet" href="assets/base.css">
             <!--[if IE]>
                 <script src="assets/ie.js"></script>
             <![endif]-->
     </head>
     <body>
-        <section id="todoapp">
+        <section id="porfolioapp">
             <header id="header">
-                <h1>todos</h1>
-                <input id="new-todo" placeholder="What needs to be done?" autofocus>
-            </header>
-            <section id="main">
-                <input id="toggle-all" type="checkbox">
-                <label for="toggle-all">Mark all as complete</label>
-                <ul id="todo-list">
-                </ul>
-            </section>
+                <h1>Repos</h1>
+            </header>           
             <footer id="footer">
                 <span id="todo-count"><strong>1</strong> item left</span>
                 <ul id="filters">
@@ -39,8 +32,8 @@
         </section>
         <footer id="info">
             <p>Double-click to edit a todo</p>
-            <p>Created by <a href="http://puremvc.org">Mike Britton and Cliff Hall for the PureMVC Project</a></p>
-            <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+            <p>Created by <a href="http://puremvc.org">Andrew Tangeman 2017</a></p>
+            <p>Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a></p>
         </footer>
         
         <!-- TODOMVC PROJECT BASE -->
@@ -56,16 +49,17 @@
         <script src="js/src/AppConstants.js"></script>
 
         <!-- PROXIES -->
-        <script src="js/src/model/proxy/TodoProxy.js"></script>
+        <script src="js/src/model/proxy/RepoProxy.js"></script>
     
-        <!-- EVENTS -->
+        <!-- EVENTS 
         <script src="js/src/view/event/AppEvents.js"></script>
-        
-        <!-- VIEW COMPONENTS -->
+                -->
+        <!-- VIEW COMPONENTS 
         <script src="js/src/view/component/TodoForm.js"></script>
-        
-        <!-- MEDIATORS -->
+        -->
+        <!-- MEDIATORS 
         <script src="js/src/view/mediator/RoutesMediator.js"></script>
+            -->
         <script src="js/src/view/mediator/TodoFormMediator.js"></script>
 
         <!-- COMMANDS -->
@@ -73,7 +67,7 @@
         <script src="js/src/controller/command/PrepControllerCommand.js"></script>
         <script src="js/src/controller/command/PrepModelCommand.js"></script>
         <script src="js/src/controller/command/PrepViewCommand.js"></script>
-        <script src="js/src/controller/command/TodoCommand.js"></script>
+          <!-- <script src="js/src/controller/command/TodoCommand.js"></script>-->
     
         <!-- APPLICATION -->
         <script src="js/src/app.js"></script>
