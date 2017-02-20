@@ -6,7 +6,7 @@
  *
  */
 puremvc.define({
-		name: 'todomvc.model.proxy.GithubRepoProxy',
+		name: 'todomvc.model.proxy.RepoProxy',
 		parent: puremvc.Proxy,
 		githubURL: 'https://api.github.com/users/atangeman/repos'
 	},
@@ -41,6 +41,6 @@ puremvc.define({
 
 	// CLASS MEMBERS
 	{
-		NAME: 'GithubRepoProxy'
+		NAME: 'RepoProxy'
 	}
 );
