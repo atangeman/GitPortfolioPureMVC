@@ -9,6 +9,7 @@ puremvc.define({ name: 'todomvc.view.event.AppEvents' }, {},
     {   
         // Event name constants
         REPOS_LOADED:    'repos_loaded',
+        GET_HOME:    'get_home',
         
         // Create event (cross-browser)
         createEvent: function( eventName ) {

@@ -18,6 +18,7 @@ puremvc.define({ name: 'todomvc.AppConstants' },{}, {
         FILTER_TODOS:             'filter_todos',
         TODOS_FILTERED:           'todos_filtered',
         GET_REPOS:                 'get_repos',
+        GET_HOME:                  'get_home',
         REPOS_LOADED:              'repos_loaded',
         // Filter routes
         FILTER_ALL:                'all',

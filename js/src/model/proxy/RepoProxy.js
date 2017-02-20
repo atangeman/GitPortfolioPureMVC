@@ -15,11 +15,7 @@ puremvc.define({
     stats: {},
     //LOCAL_STORAGE: 'todos-puremvc',
     onRegister: function() {},
-    loadData: function() {
-        this.repos = JSON.parse(this.responseText);
-        console.log(this.responseText);
-        //this.sendNotification( todomvc.AppConstants.REPOS_LOADED, { repos:this.repos});		},
-    },
+
     getRepos: function() {
         var request = new XMLHttpRequest();
         // Set the event handler

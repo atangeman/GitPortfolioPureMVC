@@ -18,46 +18,43 @@ puremvc.define({
         onRegister: function() {
             
             var todoProxy    = this.facade.retrieveProxy( todomvc.model.proxy.RepoProxy.NAME ),
-                defaultRoute = this.getRouteForFilter( todoProxy.filter ), 
-                options      = { resource:this, notfound:this.handleFilterAll },
+                defaultRoute = this.getRouteForSelection(), 
+                options      = { resource:this, notfound:this.handleHomePage },
                 routes       = {
-                   '/':            this.handleFilterAll,
-                   '/active':      this.handleFilterActive,
-                   '/completed':   this.handleFilterCompleted
+                   '/':            this.handleHomePage,
+                   '/repos':       this.handleRepoPage,
+                   '/cv':          this.handleCVPage
                 };
  
             this.router = new Router( routes ).configure( options );
             this.router.init( defaultRoute );
         },
-        
-        getRouteForFilter: function( filter ) {
+       
+        getRouteForSelection: function( selection ) {
             var route;
-            switch (filter) {
-                case todomvc.AppConstants.FILTER_ALL:
+            switch (selection) {
+                case todomvc.AppConstants.GET_HOME:
                     route = '/';
                     break;
  
-                case todomvc.AppConstants.FILTER_ACTIVE:
-                    route = '/active';
+                case todomvc.AppConstants.GET_REPOS:
+                    route = '/repos';
                     break;
- 
-                case todomvc.AppConstants.FILTER_COMPLETED:
-                    route = '/completed';
-                    break;
+
             }
             return route;
         },
- 
+        
         // route handlers
-        handleFilterAll: function () {
-            this.resource.facade.sendNotification( todomvc.AppConstants.FILTER_TODOS, todomvc.AppConstants.FILTER_ALL );
+        handleHomePage: function () {
+            this.resource.facade.sendNotification(todomvc.AppConstants.GET_HOME);
         },
  
-        handleFilterActive: function () {
-            this.resource.facade.sendNotification( todomvc.AppConstants.FILTER_TODOS, todomvc.AppConstants.FILTER_ACTIVE );
+        handleRepoPage: function () {
+            this.resource.facade.sendNotification(todomvc.AppConstants.GET_REPOS);
         },
  
-        handleFilterCompleted: function () {
+        handleCVPage: function () {
             this.resource.facade.sendNotification( todomvc.AppConstants.FILTER_TODOS, todomvc.AppConstants.FILTER_COMPLETED );
         },
     
