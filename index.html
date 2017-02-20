@@ -2,80 +2,123 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Andy Tangeman Portfolio</title>
-        <link rel="stylesheet" href="assets/base.css">
+        <link rel="stylesheet" href="assets/pure-release-0.6.2/pure-min.css">
+        <link rel="stylesheet" href="assets/layouts/email.css">
         <!--[if IE]>
                 <script src="assets/ie.js"></script>
             <![endif]-->
     </head>
     <body>
-        <section id="porfolioapp">
-            <header id="header">
-                <h1>Repos</h1>
-            </header>
-            <section id="main">
+        <div id="layout" class="content pure-g">
+            <div id="nav" class="pure-u">
+                <a href="#" class="nav-menu-button">Menu</a>
+                <div class="nav-inner">
+                                    <h1 class="email-content-title">Menu</h1>
+                    <div class="pure-menu">
+                        <ul class="pure-menu-list">
+                                                    <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">CV</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">
+                                    GitHub <span class="email-count">(2)</span>
+                                </a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Cartography</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Writing</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">Contact Me</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class="pure-menu-link">About</a>
+                            </li>                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="list" class="pure-u-1">
                 <ul id="repo-list"></ul>
-            </section>
-            <footer id="footer">
-                <span id="repo-count">
-                    <strong>1</strong>
-                    item left
+            </div>
+            <div id="main" class="pure-u-1">
+                <div class="email-content">
+                    <div class="email-content-header pure-g">
+                        <div class="pure-u-1-2">
+                            <h1 class="email-content-title">Hello from Toronto</h1>
+                            <p class="email-content-subtitle">
+                                From <a>Tilo Mitra</a>
+                                at <span>3:56pm, April 3, 2012</span>
+                            </p>
+                        </div>
+                        <div class="email-content-controls pure-u-1-2">
+                            <button class="secondary-button pure-button">Reply</button>
+                            <button class="secondary-button pure-button">Forward</button>
+                            <button class="secondary-button pure-button">Move to</button>
+                        </div>
+                    </div>
+                    <div class="email-content-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                        <p>Aliquam ac feugiat dolor. Proin mattis massa sit amet enim iaculis tincidunt. Mauris tempor mi vitae sem aliquet pharetra. Fusce in dui purus, nec malesuada mauris. Curabitur ornare arcu quis mi blandit laoreet. Vivamus imperdiet fermentum mauris, ac posuere urna tempor at. Duis pellentesque justo ac sapien aliquet egestas. Morbi enim mi, porta eget ullamcorper at, pharetra id lorem.
+                </p>
+                        <p>Donec sagittis dolor ut quam pharetra pretium varius in nibh. Suspendisse potenti. Donec imperdiet, velit vel adipiscing bibendum, leo eros tristique augue, eu rutrum lacus sapien vel quam. Nam orci arcu, luctus quis vestibulum ut, ullamcorper ut enim. Morbi semper erat quis orci aliquet condimentum. Nam interdum mauris sed massa dignissim rhoncus.
+                </p>
+                        <p>
+                            Regards,<br>Tilo
                 
-                </span>
-                <ul id="filters">
-                    <li>
-                        <a id="filterAll" class="selected" href="#/">All</a>
-                    </li>
-                    <li>
-                        <a id="filterActive" href="#/active">Active</a>
-                    </li>
-                    <li>
-                        <a id="filterCompleted" href="#/completed">Completed</a>
-                    </li>
-                </ul>
-                <button id="clear-completed">Clear completed (1)</button>
-            </footer>
-        </section>
-        <footer id="info">
-            <p>Double-click to edit a todo</p>
-            <p>
-                Created by <a href="http://puremvc.org">Andrew Tangeman 2017</a>
-            </p>
-            <p>
-                Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a>
-            </p>
-        </footer>
-        <!-- TODOMVC PROJECT BASE -->
-        <script src="assets/base.js"></script>
-        <!-- FLATIRION DIRECTOR ROUTING LIBRARY -->
-        <script src="assets/director-1.1.6.min.js"></script>
-        <!-- PUREMVC LIBRARY -->
-        <script src="js/libs/puremvc-1.0.1.min.js"></script>
-        <!-- APPLICATION CONSTANTS -->
-        <script src="js/src/AppConstants.js"></script>
-        <!-- PROXIES -->
-        <script src="js/src/model/proxy/RepoProxy.js"></script>
-        <!-- EVENTS -->
-        <script src="js/src/view/event/AppEvents.js"></script>
-        <!-- VIEW COMPONENTS         -->
-        <script src="js/src/view/component/TodoForm.js"></script>
-        <!-- MEDIATORS  -->
-        <script src="js/src/view/mediator/RoutesMediator.js"></script>
-        <script src="js/src/view/mediator/TodoFormMediator.js"></script>
-        <!-- COMMANDS -->
-        <script src="js/src/controller/command/StartupCommand.js"></script>
-        <script src="js/src/controller/command/PrepControllerCommand.js"></script>
-        <script src="js/src/controller/command/PrepModelCommand.js"></script>
-        <script src="js/src/controller/command/PrepViewCommand.js"></script>
-        <script src="js/src/controller/command/TodoCommand.js"></script>
-        <!-- APPLICATION -->
-        <script src="js/src/app.js"></script>
-        <!-- START THE APPLICATION -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var app = new todomvc.Application();
-            });
-        </script>
+                        
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <footer id="info">
+                <p>
+                    Created by <a href="http://puremvc.org">Andrew Tangeman 2017</a>
+                </p>
+                <p>
+                    Project built from <a href="http://puremvc.org">Mike Britton and Cliff Hall - PureMVC Project</a>
+                </p>
+            </footer>-->
+            </div>
+            <!-- TODOMVC PROJECT BASE -->
+            <script src="assets/base.js"></script>
+            <!-- FLATIRION DIRECTOR ROUTING LIBRARY -->
+            <script src="assets/director-1.1.6.min.js"></script>
+            <!-- PUREMVC LIBRARY -->
+            <script src="js/libs/puremvc-1.0.1.min.js"></script>
+            <!-- APPLICATION CONSTANTS -->
+            <script src="js/src/AppConstants.js"></script>
+            <!-- PROXIES -->
+            <script src="js/src/model/proxy/RepoProxy.js"></script>
+            <!-- EVENTS -->
+            <script src="js/src/view/event/AppEvents.js"></script>
+            <!-- VIEW COMPONENTS         -->
+            <script src="js/src/view/component/TodoForm.js"></script>
+            <!-- MEDIATORS  -->
+            <script src="js/src/view/mediator/RoutesMediator.js"></script>
+            <script src="js/src/view/mediator/TodoFormMediator.js"></script>
+            <!-- COMMANDS -->
+            <script src="js/src/controller/command/StartupCommand.js"></script>
+            <script src="js/src/controller/command/PrepControllerCommand.js"></script>
+            <script src="js/src/controller/command/PrepModelCommand.js"></script>
+            <script src="js/src/controller/command/PrepViewCommand.js"></script>
+            <script src="js/src/controller/command/TodoCommand.js"></script>
+            <!-- APPLICATION -->
+            <script src="js/src/app.js"></script>
+            <!-- START THE APPLICATION -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var app = new todomvc.Application();
+                });
+            </script>
     </body>
 </html>
