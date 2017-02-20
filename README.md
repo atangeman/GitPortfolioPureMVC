@@ -1,16 +1,10 @@
-## [PureMVC](http://puremvc.github.com/) [JavaScript](https://github.com/PureMVC/puremvc-js-multicore-framework/wiki) Demo - TodoMVC
-This demo is a PureMVC port of the [TodoMVC Project](http://todomvc.com), a JavaScript application framework comparison demo. Given a standard html template, css, and a plain vanilla JavaScript reference app (no framework), developers are challenged to produce implementations base upon their favorite framework. 
+## My Portfolio based on [PureMVC](http://puremvc.github.com/) [JavaScript](https://github.com/PureMVC/puremvc-js-multicore-framework/wiki) Demo - TodoMVC
+This web application is built using a PureMVC port of the [TodoMVC Project](http://todomvc.com), a JavaScript application framework comparison demo. It showcases my work in GIS and other development and uses GitHub's API to organize by project
 
 The pseudo-classes are written in PureMVC's optional built-in style.
 
-* [Live Demo](http://darkstar.puremvc.org/content_header.html?url=http://puremvc.org/pages/demos/JS/Demo_JS_TodoMVC/&desc=PureMVC%20JavaScript%20Demo:%20TodoMVC)
-* [Discussion](http://forums.puremvc.org/index.php?topic=2049.0)
-
-## Screenshot
-![PureMVC JavaScript Demo: TodoMVC](http://puremvc.org/pages/images/screenshots/PureMVC-Shot-JS-TodoMVC.png?github)
-
 ## Status
-Production - [Version 1.3](https://github.com/PureMVC/puremvc-js-demo-todomvc/blob/master/VERSION)
+Development - [Version 1.0]
 
 ## Platforms / Technologies
 * [JavaScript](http://en.wikipedia.org/wiki/JavaScript)
