@@ -1,6 +1,6 @@
 /**
- * @author Mike Britton
- *
+ * 
+ * @author Andrew Tangeman, Mike Britton
  * @class AppConstants
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
  *
