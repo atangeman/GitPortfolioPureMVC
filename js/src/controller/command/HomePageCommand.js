@@ -14,6 +14,6 @@ puremvc.define({
          * @override
          */
     execute: function(note) {
-        console.log("home page command");
+         
     }
 });

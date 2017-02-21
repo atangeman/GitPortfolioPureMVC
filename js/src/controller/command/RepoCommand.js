@@ -25,6 +25,14 @@ puremvc.define ({
                     console.log('getrepos');
                     proxy.getRepos();
                     break;
+                case todomvc.AppConstants.GET_README:
+                    console.log('getrepos');
+                    proxy.getReadme(note.getBody());
+                    break;
+                case todomvc.AppConstants.GET_MARKDOWN:
+                    console.log('getmarkdown');
+                    proxy.getMarkdown(note.getBody());
+                    break;
                 default:
                     console.log('TodoCommand received an unsupported Notification');
                     break;

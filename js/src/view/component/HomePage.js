@@ -23,9 +23,12 @@ puremvc.define({
     dispatchEvent: function(event) {
         todomvc.view.event.AppEvents.dispatchEvent(this.porfolioapp, event);
     },
-    setHomePage: function() {
-        var header, contentsub, content, li, i;
-        console.log("building home");
+    setHomePage: function(readme) {
+        var div, header, contentsub, content, li, i;
+
+        div = document.createElement('div');
+        div.className = "email-content-body";
+
         header = document.createElement('div');
         header.className = "header";
         var h = document.createElement("H1")
@@ -35,15 +38,20 @@ puremvc.define({
         h.appendChild(t);
         // Append the text to <h1>
         header.appendChild(h);
+
         content = document.createElement('div');
-        content.className = "content";
-        var newContent = document.createTextNode("Hi there and greetings!");
-        content.appendChild(newContent);
-        this.main.appendChild(header);
-        this.main.appendChild(content);
+        content.innerHTML = readme.data;
+        
+        //content = content.firstChild;
+        div.appendChild(header);
+        div.appendChild(content);
+        this.main.appendChild(div);
         // Update UI
         //this.footer.style.display = this.stats.totalTodo ? 'block' : 'none';
     },
+    setContent: function(readme) {
+        console.log(readme);
+    }
 }, // STATIC MEMBERS
 {
     NAME: 'HomePage',
