@@ -11,12 +11,15 @@ puremvc.define({
 {
     // Notifications this mediator is interested in 
     listNotificationInterests: function() {
-        return [todomvc.AppConstants.GET_HOME];
+        return [todomvc.AppConstants.GET_HOME,
+                todomvc.AppConstants.README_CALLBACK,
+                todomvc.AppConstants.MARKDOWN_CALLBACK];
     },
     // Code to be executed when the Mediator instance is registered with the View
     onRegister: function() {
         this.setViewComponent(new todomvc.view.component.HomePage);
         this.viewComponent.addEventListener(todomvc.view.event.AppEvents.GET_HOME, this);
+        this.viewComponent.addEventListener(todomvc.view.event.AppEvents.README_CALLBACK, this);
     },
     // Handle notifications from other PureMVC actors
     handleNotification: function(note) {
@@ -24,6 +27,14 @@ puremvc.define({
         case todomvc.AppConstants.GET_HOME:
             console.log("getting home");
             this.viewComponent.setHomePage();
+            break;
+        case todomvc.AppConstants.README_CALLBACK:
+            console.log("getting readme");
+            this.sendNotification(todomvc.AppConstants.GET_MARKDOWN, note.getBody());
+            break;
+        case todomvc.AppConstants.MARKDOWN_CALLBACK:
+            console.log("getting readme");
+            this.viewComponent.setHomePage(note.getBody());
             break;
         }
     },
@@ -34,6 +45,7 @@ puremvc.define({
         this.viewComponent.removeEventListener(todomvc.view.event.AppEvents.GET_HOME, this);
         this.setViewComponent(null );
     },
+
     handleEvent: function(textChangedEvent) {
         this.sendNotification(todomvc.view.event.AppEvents.GET_HOME);
     }

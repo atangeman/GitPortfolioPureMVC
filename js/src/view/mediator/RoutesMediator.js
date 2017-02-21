@@ -47,7 +47,9 @@ puremvc.define({
         
         // route handlers
         handleHomePage: function () {
-            this.resource.facade.sendNotification(todomvc.AppConstants.GET_HOME);
+            //this.resource.facade.sendNotification(todomvc.AppConstants.GET_HOME);
+            this.resource.facade.sendNotification(todomvc.AppConstants.GET_README, 
+            "https://raw.githubusercontent.com/atangeman/atangeman.github.io/master/README.md" );
         },
  
         handleRepoPage: function () {
