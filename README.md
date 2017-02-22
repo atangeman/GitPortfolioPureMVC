@@ -6,10 +6,6 @@ The pseudo-classes are written in PureMVC's optional built-in style.
 ## Status
 Development - [Version 1.0]
 
-## Platforms / Technologies
-* [JavaScript](http://en.wikipedia.org/wiki/JavaScript)
-* [TodoMVC Project](http://todomvc.com)
-
 ## License
 * Original TodoMVC Project - Copyright © Addy Osmani, Sindre Sorhus
 * PureMVC TodoMVC Demo for JavaScript - Copyright © 2012-2014 Mike Britton, Cliff Hall 
