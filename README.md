@@ -1,5 +1,6 @@
-## My Portfolio based on [PureMVC](http://puremvc.github.com/) [JavaScript](https://github.com/PureMVC/puremvc-js-multicore-framework/wiki) Demo - TodoMVC
-This web application is built using an adaptation of the [TodoMVC Project](http://todomvc.com) and PureMVC, a JavaScript application framework comparison demo. It showcases my work in GIS and other development.
+## My Portfolio based on [PureMVC](http://puremvc.github.com/)
+
+This web application is built using an adaptation of the [TodoMVC Project](http://todomvc.com) and [PureMVC](http://puremvc.org/), a JavaScript application framework for extensible MVC design. It showcases my work in GIS and other development.
 
 Custom modifications to the code include a front-end redesign and incorporation of [GitHub's API](https://developer.github.com/v3/) to list projects by type and to display .MD (markdown) files in HTML format. Later implementations may include the use of LinkedIn API.
 
