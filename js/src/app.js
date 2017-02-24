@@ -1,6 +1,5 @@
 /**
- * @author Mike Britton
- *
+ * @author Andrew Tangeman, Mike Britton
  * @class todomvc.Application
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
  */

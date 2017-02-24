@@ -1,5 +1,5 @@
 /**
- * @author Cliff Hall
+ * @author Cliff Hall, Andrew Tangeman
  * 
  * @class RoutesMediator
  * @link https://github.com/PureMVC/puremvc-js-demo-todomvc.git
