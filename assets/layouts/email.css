@@ -3,12 +3,66 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
-    color: #333;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
     color: #1b98f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+
+.header {
+    font-family: "Raleway ExtraLight";
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    letter-spacing: 0.05em;
+    font-size: 51.2px;
+    line-height: 81.92px;
+    letter-spacing: 0.8px;
+}
+
+.content {
+    margin: 25 auto;
+    padding-top: 64px;
+    max-width: 1000px;
+    width: 94%;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    color: #777;
+}
+
+.footer {
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #767676;
+    border-top: 1px solid #eee;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(238, 238, 238);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+    background-color: #efefef;
+    text-align: center;
 }
 
 /*
@@ -193,7 +247,7 @@ a {
 }
 
 /* Email Content Styles */
-.email-content-header, .email-content-body, .email-content-footer {
+.email-content-header, .email-content-body {
     padding: 1em 2em;
 }
 
@@ -275,7 +329,7 @@ a {
     }
 
     #main {
-        position: fixed;
+        position: relative;
         top: 33%;
         right: 0;
         bottom: 0;

@@ -27,7 +27,7 @@ puremvc.define({
         var div, header, contentsub, content, li, i;
 
         div = document.createElement('div');
-        div.className = "email-content-body";
+        div.className = "email-content";
 
         header = document.createElement('div');
         header.className = "header";
@@ -40,6 +40,7 @@ puremvc.define({
         header.appendChild(h);
 
         content = document.createElement('div');
+        content.className= "email-content-body";
         content.innerHTML = readme.data;
         
         //content = content.firstChild;
